@@ -2,50 +2,11 @@
  * Copyright (c) 2016. The League of Amazing Programmers. All Rights Reserved.
  */
 
-package org.jointheleague.robot.example;
+package org.jointheleague.graphical.robot.example;
 
 import org.jointheleague.graphical.robot.Robot;
 
-public class Driver {
-
-    private final Robot robot;
-
-    public Driver(Robot robot) {
-        super();
-        this.robot = robot;
-    }
-
-    public void setSpeed(int speed) {
-        robot.setSpeed(speed);
-    }
-
-    public void turn(int degrees) {
-        robot.turn(degrees);
-    }
-
-    public void penUp() {
-        robot.penUp();
-    }
-
-    public void penDown() {
-        robot.penDown();
-    }
-
-    public void move(int distance) {
-        robot.move(distance);
-    }
-
-    public void moveTo(int x, int y) {
-        robot.moveTo(x, y);
-    }
-
-    public void setRandomPenColor() {
-        robot.setRandomPenColor();
-    }
-
-    public void hide() {
-        robot.hide();
-    }
+public class MyRobot extends Robot {
 
     /**
      * Draws a regular polygon with center at the org.jointheleague.graphical.robot's current position

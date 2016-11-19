@@ -2,7 +2,7 @@
  * Copyright (c) 2016. The League of Amazing Programmers. All Rights Reserved.
  */
 
-package org.jointheleague.robot.example;
+package org.jointheleague.graphical.robot.example;
 
 import org.jointheleague.graphical.robot.KeyboardAdapter;
 import org.jointheleague.graphical.robot.Robot;

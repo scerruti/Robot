@@ -277,15 +277,6 @@ public class Robot implements ActionListener {
     }
 
     /**
-     * Sets the pen color
-     *
-     * @param color the new pen color
-     */
-    public void setPenColor(Color color) {
-        penColor = color;
-    }
-
-    /**
      * Sets the pen color given the red, green and blue components of the new
      * color. The components are specified as an integer between 0 and 255.
      *
@@ -528,14 +519,14 @@ public class Robot implements ActionListener {
         pos = new Pos(x, y);
     }
 
-    //
-
     /**
      * Lifts the pen, i.e., the Robot stops drawing lines.
      */
     public void penUp() {
         penDown = false;
     }
+
+    //
 
     /**
      * Set the pen down, i.e., the Robot traces its movements with lines.
@@ -587,6 +578,19 @@ public class Robot implements ActionListener {
                 window.addKeyListener(adapter);
             }
         });
+    }
+
+    public Color getPenColor() {
+        return penColor;
+    }
+
+    /**
+     * Sets the pen color
+     *
+     * @param color the new pen color
+     */
+    public void setPenColor(Color color) {
+        penColor = color;
     }
 
     private enum TimeQuantum {

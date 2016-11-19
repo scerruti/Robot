@@ -2,19 +2,18 @@
  * Copyright (c) 2016. The League of Amazing Programmers. All Rights Reserved.
  */
 
-package org.jointheleague.robot.example;
+package org.jointheleague.graphical.robot.example;
 
-import org.jointheleague.graphical.robot.KeyboardAdapter;
 import org.jointheleague.graphical.robot.Robot;
 
-public class RobotExample7 {
+public class RobotExample6 {
 
     public static void main(String[] args) throws InterruptedException {
         Robot vic = new Robot("vic", 600, 300);
         Robot june = new Robot("june", 300, 300);
         june.setSpeed(10);
         vic.setSpeed(10);
-        vic.addKeyboardAdapter(new KeyboardAdapter());
-        june.addKeyboardAdapter(new WaszKeyboardAdapter());
+        vic.addKeyboardAdapter(new ShiftKeyboardAdapter(true));
+        june.addKeyboardAdapter(new ShiftKeyboardAdapter(false));
     }
 }
