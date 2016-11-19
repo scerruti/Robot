@@ -44,6 +44,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Eclipse
+.project
+.settings
+
 # IntelliJ Idea
 .idea/
 *.iml
