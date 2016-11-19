@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2016. The League of Amazing Programmers. All Rights Reserved.
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>robot-examples</artifactId>
+    <packaging>jar</packaging>
+    <name>Robot Examples</name>
+    <url>https://github.com/JoinTheLeague/robot/tree/master/robot-examples</url>
+    <description>
+        Examples for Robot.
+    </description>
+    <parent>
+        <groupId>org.jointheleague.graphical</groupId>
+        <artifactId>robot-pom</artifactId>
+        <version>0.1.1-SNAPSHOT</version>
+    </parent>
+    <properties>
+        <site.installationModule>robot-examples</site.installationModule>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>robot</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>2.5.4</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                    <skip>false</skip>
+                </configuration>
+            </plugin>
+            <!-- make a script so we can run stuff directly by calling
+                 mvn package appassembler:assemble -DskipTests -Dmaven.javadoc.skip=true  -Dmaven.source.skip=true
+                 from the google-cloud-examples folder. The script is written to target/appassembler/bin/. -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>appassembler-maven-plugin</artifactId>
+                <version>1.10</version>
+                <configuration>
+                    <programs>
+                        <program>
+                            <mainClass>org.jointheleague.graphical.robot.example.RobotExample1</mainClass>
+                            <name>RobotExample1</name>
+                        </program>
+                        <program>
+                            <mainClass>org.jointheleague.graphical.robot.example.RobotExample2</mainClass>
+                            <name>RobotExample2</name>
+                        </program>
+                        <program>
+                            <mainClass>org.jointheleague.graphical.robot.example.RobotExample3</mainClass>
+                            <name>RobotExample3</name>
+                        </program>
+                        <program>
+                            <mainClass>org.jointheleague.graphical.robot.example.RobotExample4</mainClass>
+                            <name>RobotExample4</name>
+                        </program>
+                        <program>
+                            <mainClass>org.jointheleague.graphical.robot.example.RobotExample5</mainClass>
+                            <name>RobotExample5</name>
+                        </program>
+                        <program>
+                            <mainClass>org.jointheleague.graphical.robot.example.RobotExample6</mainClass>
+                            <name>RobotExample6</name>
+                        </program>
+                        <program>
+                            <mainClass>org.jointheleague.graphical.robot.example.RobotExample7</mainClass>
+                            <name>RobotExample7</name>
+                        </program>
+                        <program>
+                            <mainClass>org.jointheleague.graphical.robot.example.RobotExample8</mainClass>
+                            <name>RobotExample8</name>
+                        </program>
+                        <program>
+                            <mainClass>org.jointheleague.graphical.robot.example.RobotExample9</mainClass>
+                            <name>RobotExample9</name>
+                        </program>
+                    </programs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/IT*Snippets.java</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <!-- We use the snippets profile to run snippets ITs -->
+            <id>snippets</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>2.19.1</version>
+                        <configuration>
+                            <excludes combine.self="override"></excludes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

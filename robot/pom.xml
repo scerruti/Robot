@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2016. The League of Amazing Programmers. All Rights Reserved.
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>robot</artifactId>
+    <packaging>jar</packaging>
+    <name>Robot</name>
+    <url>https://github.com/JoinTheLeague/robot/tree/master/robot</url>
+    <description>
+        This project needs a better description.
+    </description>
+    <parent>
+        <groupId>org.jointheleague.graphical</groupId>
+        <artifactId>robot-pom</artifactId>
+        <version>0.1.1-SNAPSHOT</version>
+    </parent>
+    <properties>
+        <site.installationModule>robot</site.installationModule>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
