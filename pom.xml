@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
     <version>0.1.1-SNAPSHOT</version>
     <name>Robot</name>
-    <url>https://github.com /JoinTheLeague/robot</url>
+    <url>https://github.com/JoinTheLeague/Robot</url>
     <description>
         This also needs a description.
     </description>
@@ -79,16 +79,14 @@
         <system>GitHub Issues</system>
     </issueManagement>
     <distributionManagement>
-        <!--
         <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>league-snapshots</id>
+            <url>http://nexus.jointheleague.org:8081/repository/league-snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>league-releases</id>
+            <url>http://nexus.jointheleague.org:8081/repository/league-releases</url>
         </repository>
-        -->
         <site>
             <id>github-pages-site</id>
             <name>Deployment through GitHub's site deployment plugin</name>
@@ -241,20 +239,20 @@
                     <compilerArgument>-Xlint:unchecked</compilerArgument>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-gpg-plugin</artifactId>-->
+                <!--<version>1.6</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>sign-artifacts</id>-->
+                        <!--<phase>deploy</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>sign</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
