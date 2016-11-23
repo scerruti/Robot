@@ -69,9 +69,9 @@
         <name>The League of Amazing Programmers</name>
     </organization>
     <scm>
-        <connection>scm:git:git@github.com:JoinTheLeague/robot.git</connection>
-        <developerConnection>scm:git:git@github.com:JoinTheLeague/robot.git</developerConnection>
-        <url>https://github.com/JoinTheLeague/robot</url>
+        <connection>scm:git:git@github.com:scerruti/robot.git</connection>
+        <developerConnection>scm:git:git@github.com:scerruti/robot.git</developerConnection>
+        <url>https://github.com/scerruti/robot</url>
         <tag>HEAD</tag>
     </scm>
     <issueManagement>
